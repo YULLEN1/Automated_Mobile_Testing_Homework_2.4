@@ -1,7 +1,9 @@
 package org.netology.AppiumTests;
 
 import org.openqa.selenium.support.PageFactory;
+
 import java.time.Duration;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;

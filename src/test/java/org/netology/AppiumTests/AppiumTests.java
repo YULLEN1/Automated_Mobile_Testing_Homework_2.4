@@ -1,5 +1,5 @@
 package org.netology.AppiumTests;
-import io.appium.java_client.AppiumDriver;
+
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,11 +11,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
 public class AppiumTests {
 
     private AndroidDriver driver;
+
     private URL getUrl() {
         try {
             return new URL("http://127.0.0.1:4723");
@@ -37,8 +39,6 @@ public class AppiumTests {
         desiredCapabilities.setCapability("appium:nativeWebScreenshot", true);
         desiredCapabilities.setCapability("appium:newCommandTimeout", 3600);
         desiredCapabilities.setCapability("appium:connectHardwareKeyboard", true);
-
-
 
         driver = new AndroidDriver(getUrl(), desiredCapabilities);
     }
